@@ -1,17 +1,11 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*height: calc(100vh - 60px);*/
+  margin-top: 60px;
 }
 
 .App-title {
@@ -25,4 +19,99 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+
+.wallet-container {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wallet-transactions {
+  /*height: 75%;*/
+}
+.wallet-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  background: #FFF;
+  width: 100%;
+
+  /*height: 25%;*/
+  /*width: 50%;*/
+  /*text-align: left;*/
+}
+
+.wallet-header > div {
+  font-weight: bold;
+}
+
+.wallet-header > div > span {
+  font-weight: normal;
+  color: #A9A9A9;
+}
+.user-table {
+  margin-top: 50px;
+  width: 75%;
+}
+
+.table-header {
+  position: sticky;
+  width: 100%;
+  top: 20px; 
+  background: #FAFAFA;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: 2px solid #CECECE;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+.table-header > div {
+  width: 33%;
+}
+
+.wallet-transactions {
+  display: flex;
+  flex-direction: column;
+}
+
+.wallet-transactions > div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.wallet-transactions > div > div{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 35px;
+  width: 27%;
+  display: flex;
+  align-items: left;
+}
+
+.wallet-transactions > div > div:nth-child(1){
+  width: 44%;
+  margin-right: 2%;
+  display: flex;
+  align-items: left;
+}
+
+.gain {
+  color: green;
+}
+.loss {
+  color: red;
 }
